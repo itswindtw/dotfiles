@@ -1,0 +1,16 @@
+[user]
+  name = Meng-Hsin Tung
+  email = itswindtw@gmail.com
+[color]
+  ui = always
+[alias]
+  co = checkout
+  st = status
+  di = diff
+  l  = log
+  ci = commit
+[credential]
+  helper = osxkeychain
+[push]
+  default = simple
+
