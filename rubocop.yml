@@ -9,3 +9,6 @@ AllCops:
     - 'db/**/*'
     - 'vendor/**/*'
 
+Style/SignalException:
+  EnforcedStyle: only_raise
+
