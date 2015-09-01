@@ -32,3 +32,8 @@ set cursorline
 
 set background=dark
 colorscheme base16-twilight
+
+set backspace=indent,eol,start
+
+" Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+au FileType coq call coquille#FNMapping()
