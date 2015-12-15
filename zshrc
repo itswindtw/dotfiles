@@ -79,3 +79,6 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# OPAM configuration
+. /Users/itswindtw/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
