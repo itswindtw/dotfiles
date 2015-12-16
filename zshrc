@@ -10,6 +10,10 @@ ZSH_THEME="blinks"
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
@@ -45,12 +49,16 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime rbenv mix)
+plugins=(git sublime rbenv)
 
 # User configuration
 
+# Base16 Shell
+BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin/
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -79,6 +87,3 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# OPAM configuration
-. /Users/itswindtw/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true

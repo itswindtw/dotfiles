@@ -1,6 +1,16 @@
 set nocompatible
+filetype off
 
-execute pathogen#infect()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" Add plugins here
+Plugin 'chriskempson/base16-vim'
+
+call vundle#end()
+filetype plugin indent on
 
 set showcmd
 set showmode
@@ -21,9 +31,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-filetype plugin on
-filetype indent on
-
 set nowrap
 set linebreak
 
@@ -31,6 +38,7 @@ set number
 set cursorline
 
 set background=dark
+let base16colorspace=256
 colorscheme base16-twilight
 
 set backspace=indent,eol,start
