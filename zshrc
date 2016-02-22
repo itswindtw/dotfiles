@@ -59,6 +59,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+export PATH=$PATH:/Applications/Julia-0.4.3.app/Contents/Resources/julia/bin
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -75,6 +76,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
+export RUBY_CONFIGURE_OPTS="--with-readline-dir="$(brew --prefix readline)""
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
@@ -87,3 +89,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/itswindtw/Utilities/google-cloud-sdk/path.zsh.inc'
+
+# The next line enables shell command completion for gcloud.
+source '/Users/itswindtw/Utilities/google-cloud-sdk/completion.zsh.inc'
+

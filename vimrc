@@ -8,6 +8,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins here
 Plugin 'chriskempson/base16-vim'
+Plugin 'lambdatoast/elm.vim'
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 filetype plugin indent on
