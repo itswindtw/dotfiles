@@ -56,3 +56,13 @@ URxvt.resize-font.bigger: C-Up
 *.color14:      base0F
 *.color15:      base07
 
+
+!! rofi
+
+rofi.color-enabled: true
+rofi.color-window: base00, base00, base01
+rofi.color-normal: base00, base04, base00, base01, base04
+rofi.color-active: base00, base03, base00, base01, base03
+rofi.color-urgent: base00, base08, base00, base01, base08
+rofi.separator-style: solid
+
