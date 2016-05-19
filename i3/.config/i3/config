@@ -188,4 +188,5 @@ for_window [class="chromium"] border none
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec_always compton -CGbf
+#exec --no-startup-id cmus
 
