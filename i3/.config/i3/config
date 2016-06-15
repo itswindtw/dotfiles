@@ -176,17 +176,25 @@ bar {
 # Key bindings
 
 bindsym $mod+shift+x exec i3lock --color "$base01"
+bindsym Print exec scrot -e 'mv $f /tmp/ && gpicview /tmp/$f'
+bindsym Mod1+Print exec scrot -s -e 'mv $f /tmp/ && gpicview /tmp/$f'
 
 # Window settings
 
-#assign [class="chromium"] 3 
-assign [class="URxvt" instance="cmus"] 10
+assign [class="chromium"] 2
+assign [class="Deadbeef"] 10
+assign [class="telegram-desktop"] 10
 
 for_window [class="chromium"] border none
+for_window [class="Gpicview"] floating enable, resize set 1280 960, move absolute position center
 
 # Exec
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
 exec_always compton -CGbf
-#exec --no-startup-id cmus
+exec --no-startup-id fcitx
 
+exec --no-startup-id telegram-desktop
+exec --no-startup-id deadbeef
+
+exec --no-startup-id urxvt
