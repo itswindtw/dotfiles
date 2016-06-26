@@ -7,20 +7,26 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Add plugins here
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'chriskempson/base16-vim'
 Plugin 'lambdatoast/elm.vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'derekwyatt/vim-scala'
+
+Plugin 'scrooloose/syntastic'
+
+" Plugin 'def-lkb/vimbufsync'
+" Plugin 'the-lambda-church/coquille'
 
 call vundle#end()
 filetype plugin indent on
+
+syntax on
 
 set showcmd
 set showmode
 set visualbell
 set autoread
-
-syntax on
-
 set noswapfile
 set nobackup
 set nowb
@@ -33,8 +39,9 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-set nowrap
+set wrap
 set linebreak
+set nolist
 
 set number
 set cursorline
@@ -44,6 +51,7 @@ let base16colorspace=256
 colorscheme base16-twilight
 
 set backspace=indent,eol,start
+set clipboard+=unnamedplus
 
 " Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
 au FileType coq call coquille#FNMapping()
@@ -54,9 +62,20 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+let g:syntastic_loc_list_height = 5
+let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+
+let g:syntastic_error_symbol = '❌'
+let g:syntastic_style_error_symbol = '⁉️'
+let g:syntastic_warning_symbol = '⚠️'
+let g:syntastic_style_warning_symbol = '💩'
+
+highlight link SyntasticErrorSign SignColumn
+highlight link SyntasticWarningSign SignColumn
+highlight link SyntasticStyleErrorSign SignColumn
+highlight link SyntasticStyleWarningSign SignColumn
 
 " OCaml - Merlin
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')

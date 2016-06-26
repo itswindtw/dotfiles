@@ -49,7 +49,7 @@ ZSH_THEME="blinks"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git sublime rbenv)
+plugins=(sublime rbenv stack)
 
 # User configuration
 
@@ -57,7 +57,7 @@ plugins=(git sublime rbenv)
 BASE16_SHELL="$HOME/.config/base16-shell/base16-default.dark.sh"
 [[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
 export PATH=$PATH:/Applications/Julia-0.4.3.app/Contents/Resources/julia/bin
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -90,9 +90,27 @@ export RUBY_CONFIGURE_OPTS="--with-readline-dir="$(brew --prefix readline)""
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# PHP environment
+export PATH=$(brew --prefix homebrew/php/php70)/bin:$PATH
+export PATH=$PATH:$HOME/.composer/vendor/bin
+
 # The next line updates PATH for the Google Cloud SDK.
 source '/Users/itswindtw/Utilities/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables shell command completion for gcloud.
 source '/Users/itswindtw/Utilities/google-cloud-sdk/completion.zsh.inc'
 
+# OCaml
+eval `opam config env`
+. /Users/itswindtw/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+# Haskell
+export PATH=$HOME/.local/bin:$PATH
+
+alias vim="nvim"
+
+# PageComposer dev
+export FONTCONFIG_PATH=/opt/X11/lib/X11/fontconfig
+export PANGOCAIRO_BACKEND=fc
+
+export PATH=$HOME/.cabal/bin:$PATH
