@@ -1,0 +1,5 @@
+{_,shift +}XF86MonBrightness{Down,Up}
+    xbacklight {-dec 10,-dec 1,-inc 10,-inc 1}
+
+XF86Audio{LowerVolume,RaiseVolume,Mute}
+    amixer set Master {5-,5+,toggle} 
