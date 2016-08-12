@@ -66,3 +66,12 @@ rofi.color-active: base00, base03, base00, base01, base03
 rofi.color-urgent: base00, base08, base00, base01, base08
 rofi.separator-style: solid
 
+!! HiDPI
+
+Xft.dpi: 192
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb

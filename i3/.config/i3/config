@@ -18,7 +18,7 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+q kill
 
 # use rofi as launcher
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -p "run: " -opacity "85"'
+bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu='rofi -dmenu -i -dpi 192 -p "run: " -opacity "85"'
 
 # change focus
 bindsym $mod+j focus left
@@ -185,16 +185,21 @@ assign [class="chromium"] 2
 assign [class="Deadbeef"] 10
 assign [class="telegram-desktop"] 10
 
+for_window [class="Firefox"] border none
+for_window [class="Opera"] border none
 for_window [class="chromium"] border none
+for_window [class="telegram-desktop"] border none
 for_window [class="Gpicview"] floating enable, resize set 1280 960, move absolute position center
 
 # Exec
 
 exec_always --no-startup-id feh --randomize --bg-scale ~/Pictures/Wallpapers/*
-exec_always compton -CGbf
+#exec_always compton -CGbf
 exec --no-startup-id fcitx
+exec --no-startup-id sxhkd
 
 exec --no-startup-id telegram-desktop
-exec --no-startup-id deadbeef
+#exec --no-startup-id deadbeef
 
 exec --no-startup-id urxvt
+exec_always nm-applet
