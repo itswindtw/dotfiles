@@ -9,11 +9,10 @@ Plugin 'VundleVim/Vundle.vim'
 " Add plugins here
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'lambdatoast/elm.vim'
+Plugin 'ElmCast/elm-vim'
 Plugin 'elixir-lang/vim-elixir'
-Plugin 'derekwyatt/vim-scala'
-
 Plugin 'scrooloose/syntastic'
+" Plugin 'JuliaLang/julia-vim'
 
 " Plugin 'def-lkb/vimbufsync'
 " Plugin 'the-lambda-church/coquille'
@@ -82,5 +81,8 @@ let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 let g:syntastic_ocaml_checkers = ['merlin']
 
+"autocmd FileType ocaml source substitute(system('opam config var share'), '\n$', '', '''') . "/typerex/ocp-indent/ocp-indent.vim"
 set rtp^="/Users/itswindtw/.opam/system/share/ocp-indent/vim"
 
+" Elm
+let g:elm_syntastic_show_warnings = 1
