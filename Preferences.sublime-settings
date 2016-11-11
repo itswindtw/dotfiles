@@ -1,6 +1,6 @@
 {
 	"bold_folder_labels": true,
-	"color_scheme": "Packages/Base16 Color Schemes/base16-tomorrow.dark.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-tomorrow-night.tmTheme",
 	"ensure_newline_at_eof_on_save": true,
 	"font_size": 14,
 	"highlight_line": true,

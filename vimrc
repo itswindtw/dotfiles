@@ -12,6 +12,7 @@ Plugin 'chriskempson/base16-vim'
 Plugin 'ElmCast/elm-vim'
 Plugin 'elixir-lang/vim-elixir'
 Plugin 'scrooloose/syntastic'
+Plugin 'posva/vim-vue'
 " Plugin 'JuliaLang/julia-vim'
 
 " Plugin 'def-lkb/vimbufsync'
@@ -50,7 +51,7 @@ let base16colorspace=256
 colorscheme base16-twilight
 
 set backspace=indent,eol,start
-set clipboard+=unnamedplus
+set clipboard+=unnamed
 
 " Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
 au FileType coq call coquille#FNMapping()
