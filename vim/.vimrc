@@ -7,6 +7,7 @@ Plug 'scrooloose/syntastic'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-commentary'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'posva/vim-vue'
@@ -69,9 +70,12 @@ cnoreabbrev Qall qall
 noremap <F3> :NERDTreeToggle<CR>
 
 " vim-airline
-let g:airline_theme = 'powerlineish'
+let g:airline_theme = 'base16'
 
 " Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1

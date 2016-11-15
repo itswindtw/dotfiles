@@ -12,3 +12,6 @@ fenv source $HOME/Applications/google-cloud-sdk/completion.bash.inc
 
 # Postgres.app
 set -x PATH /Applications/Postgres.app/Contents/Versions/9.6/bin $PATH
+
+# Yarn
+set -x PATH $HOME/.yarn/bin $PATH
