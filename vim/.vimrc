@@ -11,6 +11,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'posva/vim-vue'
+Plug 'fatih/vim-go'
 " Plug 'elixir-lang/vim-elixir'
 " Plug 'ElmCast/elm-vim'
 call plug#end()
