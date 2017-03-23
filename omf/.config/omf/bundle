@@ -3,3 +3,4 @@ package foreign-env
 package rbenv
 package sublime
 theme default
+theme pure
