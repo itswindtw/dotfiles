@@ -14,8 +14,14 @@ fenv source $HOME/Applications/google-cloud-sdk/completion.bash.inc
 set -x PATH /Applications/Postgres.app/Contents/Versions/9.6/bin $PATH
 
 # Yarn
-set -x PATH (yarn global bin) $PATH
+set -x PATH $HOME/.config/yarn/global/node_modules/.bin $PATH
+
+# Haskell Stack
+set -x PATH $HOME/.local/bin $PATH
 
 # OCaml
 source /Users/itswindtw/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
 eval (opam config env)
+
+# Julia 
+set -x PATH /Applications/Julia-0.6.app/Contents/Resources/julia/bin/ $PATH

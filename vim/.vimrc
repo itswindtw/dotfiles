@@ -15,6 +15,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'sheerun/vim-polyglot'
 Plug 'posva/vim-vue'
+Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'elixir-lang/vim-elixir'
 Plug 'ElmCast/elm-vim'
 call plug#end()
@@ -55,6 +56,7 @@ set cursorline
 set wrap
 set linebreak
 set nolist
+set splitright
 
 set foldenable
 set foldlevelstart=10
@@ -116,7 +118,14 @@ highlight link SyntasticStyleWarningSign SignColumn
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
 execute "set rtp+=" . g:opamshare . "/merlin/vim"
 let g:syntastic_ocaml_checkers = ['merlin']
-set rtp^="/Users/itswindtw/.opam/system/share/ocp-indent/vim"
+" set rtp^="/Users/itswindtw/.opam/system/share/ocp-indent/vim"
+set rtp^="/Users/itswindtw/.opam/4.02.3+buckle-master/share/ocp-indent/vim"
 
 " Elm
 let g:polyglot_disabled = ['elm']
+
+" ctrlp
+" let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
+let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files -co --exclude-standard']
+
+
