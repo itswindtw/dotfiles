@@ -14,10 +14,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 
 Plug 'sheerun/vim-polyglot'
-Plug 'posva/vim-vue'
-Plug 'JuliaEditorSupport/julia-vim'
+" Plug 'posva/vim-vue'
+" Plug 'JuliaEditorSupport/julia-vim'
 " Plug 'elixir-lang/vim-elixir'
-Plug 'ElmCast/elm-vim'
+" Plug 'ElmCast/elm-vim'
 call plug#end()
 
 filetype plugin indent on
@@ -115,17 +115,16 @@ highlight link SyntasticStyleErrorSign SignColumn
 highlight link SyntasticStyleWarningSign SignColumn
 
 " OCaml, Merlin, ocp-indent
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
-let g:syntastic_ocaml_checkers = ['merlin']
+" let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+" execute "set rtp+=" . g:opamshare . "/merlin/vim"
+" let g:syntastic_ocaml_checkers = ['merlin']
 " set rtp^="/Users/itswindtw/.opam/system/share/ocp-indent/vim"
-set rtp^="/Users/itswindtw/.opam/4.02.3+buckle-master/share/ocp-indent/vim"
+" set rtp^="/Users/itswindtw/.opam/4.02.3+buckle-master/share/ocp-indent/vim"
 
 " Elm
-let g:polyglot_disabled = ['elm']
+" let g:polyglot_disabled = ['elm']
 
 " ctrlp
 " let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:ctrlp_user_command = ['.git', 'cd %s; git ls-files -co --exclude-standard']
-
 
